@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drum Kit Studio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1 id="title">Drum Kit <span class="highlight">🥁</span> Studio</h1>
+      <p class="subtitle">Press keys or click to play</p>
+    </header>
+
+    <!-- Contact Button -->
+    <div id="contact-button">
+      <button id="contact-btn"><i class="fas fa-envelope"></i> Contact</button>
+      <div id="contact-info">
+        <p><i class="fas fa-envelope"></i> <a href="mailto:shubhamp2710@gmail.com">shubhamp2710@gmail.com</a></p>
+        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/shubham-palve-3788232ba" target="_blank">Shubham Palve</a></p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="volume-btn" class="control-btn"><i class="fas fa-volume-up"></i></button>
+      <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.7">
+    </div>
+
+    <div class="set">
+      <div class="drum-container">
+        <button class="w drum">w</button>
+        <span class="drum-label">Tom 1</span>
+      </div>
+      <div class="drum-container">
+        <button class="a drum">a</button>
+        <span class="drum-label">Tom 2</span>
+      </div>
+      <div class="drum-container">
+        <button class="s drum">s</button>
+        <span class="drum-label">Tom 3</span>
+      </div>
+      <div class="drum-container">
+        <button class="d drum">d</button>
+        <span class="drum-label">Tom 4</span>
+      </div>
+      <div class="drum-container">
+        <button class="j drum">j</button>
+        <span class="drum-label">Snare</span>
+      </div>
+      <div class="drum-container">
+        <button class="k drum">k</button>
+        <span class="drum-label">Crash</span>
+      </div>
+      <div class="drum-container">
+        <button class="l drum">l</button>
+        <span class="drum-label">Kick</span>
+      </div>
+    </div>
+
+    <div id="key-guide">
+      <p>Press the corresponding key on your keyboard or click on the drums to play</p>
+    </div>
+
+    <div id="beat-maker">
+      <h2>Beat Maker</h2>
+      <div id="beat-controls">
+        <button id="play-beat" class="beat-btn"><i class="fas fa-play"></i> Play</button>
+        <button id="stop-beat" class="beat-btn"><i class="fas fa-stop"></i> Stop</button>
+        <button id="clear-beat" class="beat-btn"><i class="fas fa-trash"></i> Clear</button>
+        <!-- Tempo Control -->
+        <div id="tempo-control">
+          <label for="tempo-slider">Tempo: <span id="tempo-value">120</span> BPM</label>
+          <input type="range" id="tempo-slider" min="60" max="200" step="5" value="120">
+        </div>
+      </div>
+      <div id="beat-grid"></div>
+    </div>
+
+    <!-- Drum Patterns Library -->
+    <div id="patterns-library">
+      <h2>Patterns Library</h2>
+      <div id="patterns-container">
+        <button class="pattern-btn" data-pattern="basic-rock">Basic Rock</button>
+        <button class="pattern-btn" data-pattern="hip-hop">Hip Hop</button>
+        <button class="pattern-btn" data-pattern="jazz">Jazz</button>
+        <button class="pattern-btn" data-pattern="latin">Latin</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Drum Kit Studio</p>
+  </footer>
+
+  <script src="index.js" charset="utf-8"></script>
+</body>
+</html>
